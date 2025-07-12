@@ -21,7 +21,7 @@ public class ObjectChanger : MonoBehaviour
             }
         }
         ref string curState = ref objectKeeper.GetObjectByName(objName.text).state;
-        print(objName.text);
+        //print(objName.text);
         button.transform.Find("Text").GetComponent<TMP_Text>().text = curState;
     }
 

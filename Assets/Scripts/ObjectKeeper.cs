@@ -25,7 +25,7 @@ public class ObjectKeeper : MonoBehaviour
             string objNametmp = allChangableObjects[i].curObject.name;
             objectChanger.name = objNametmp.Substring(0, objNametmp.Length - 6);
             objectChanger.objName.text = objNametmp.Substring(0, objNametmp.Length - 6);
-            print(objNametmp.Substring(0, objNametmp.Length - 6));
+//            print(objNametmp.Substring(0, objNametmp.Length - 6));
             objectChanger.currentCustomObject = allChangableObjects[i];
             
             objStatePanels.Add(objStatePanel);
@@ -39,11 +39,11 @@ public class ObjectKeeper : MonoBehaviour
             //string objNametmp = allChangableObjects[i].curObject.name;
             if (allChangableObjects[i].curObject.name.StartsWith(name))
             {
-                print("Object with name " + name + " found in ObjectKeeper.");
+                //print("Object with name " + name + " found in ObjectKeeper.");
                 return allChangableObjects[i];
             }
         }
-        print("Object with name " + name + " not found in ObjectKeeper.");
+        //print("Object with name " + name + " not found in ObjectKeeper.");
         return null;
     }
 }

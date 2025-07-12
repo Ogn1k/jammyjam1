@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 3537897748819179629}
   - component: {fileID: 3015672240193462662}
   - component: {fileID: 4884090577758455941}
+  - component: {fileID: 2702189745186726216}
   m_Layer: 0
   m_Name: TestObj1_norma
-  m_TagString: Untagged
+  m_TagString: normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,3 +109,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2702189745186726216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5611093427127114470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62812d2ad5b5be4438614ace3fa364e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lvlLogic: {fileID: 0}
