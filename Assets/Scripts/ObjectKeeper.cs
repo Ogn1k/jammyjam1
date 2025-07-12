@@ -11,7 +11,7 @@ public class ObjectKeeper : MonoBehaviour
     public GameObject parentObj;
 
     public List<CurrentCustomObject> allChangableObjects = new List<CurrentCustomObject>();
-    [SerializeField] private List<GameObject> objStatePanels = new List<GameObject>();
+    [SerializeField] public List<GameObject> objStatePanels = new List<GameObject>();
 
     private void Start()
     {

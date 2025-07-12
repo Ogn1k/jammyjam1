@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3854516913372030595}
   - component: {fileID: 6712750420939130793}
   - component: {fileID: 5071938868897686775}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: "TestObj1_\u0441yber"
   m_TagString: cyber
   m_Icon: {fileID: 0}

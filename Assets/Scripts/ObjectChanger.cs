@@ -32,13 +32,13 @@ public class ObjectChanger : MonoBehaviour
         {
             curState = "Fantasy";
             //currentCustomObject.curObject = objectState.state_Fantasy;
-            SetObjectCyber();
+            SetObjectFantasy();
         }
         else if (curState == "Fantasy")
         {
             curState = "Cyber";
             //currentCustomObject.curObject = objectState.state_Cyber;
-            SetObjectFantasy();
+            SetObjectCyber();
         }
         else if (curState == "Cyber")
         {
@@ -46,7 +46,7 @@ public class ObjectChanger : MonoBehaviour
             //currentCustomObject.curObject = objectState.state_Normal;
             SetObjectNormal();
         }
-        print(objName.text);
+        //print(objName.text);
         button.transform.Find("Text").GetComponent<TMP_Text>().text = curState;
     }
 

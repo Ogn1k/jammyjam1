@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8251932823810783174}
   - component: {fileID: 1893365258276127077}
   - component: {fileID: 4940712323616295361}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TestObj1_fanta
   m_TagString: fantasy
   m_Icon: {fileID: 0}
