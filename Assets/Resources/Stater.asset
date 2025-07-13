@@ -23,3 +23,48 @@ MonoBehaviour:
     state_Normal: {fileID: 3178232935573774852, guid: 257d210b598b82046bec4460b1a1ee75, type: 3}
     state_Fantasy: {fileID: 980095337772602624, guid: aa2b65595b933e9498ff119a6f3e90f7, type: 3}
     state_Cyber: {fileID: 453283711833825238, guid: c937066bd57a99f43806007203055133, type: 3}
+  - id: 
+    name: Box
+    state_Normal: {fileID: 7944221985040956971, guid: c11161b64ce30024996cf81e1c0231a5, type: 3}
+    state_Fantasy: {fileID: 2124578220584978703, guid: d354f0959e5996641ac1a04cb3287b42, type: 3}
+    state_Cyber: {fileID: 9045780991887105936, guid: ed8953c6782b6af49834e8acf32f4565, type: 3}
+  - id: 
+    name: Box
+    state_Normal: {fileID: 7944221985040956971, guid: c11161b64ce30024996cf81e1c0231a5, type: 3}
+    state_Fantasy: {fileID: 2124578220584978703, guid: d354f0959e5996641ac1a04cb3287b42, type: 3}
+    state_Cyber: {fileID: 9045780991887105936, guid: ed8953c6782b6af49834e8acf32f4565, type: 3}
+  - id: 
+    name: Lamp
+    state_Normal: {fileID: 2433952444509872564, guid: d37f7191e3373fc4cbd98d19e5f8f9cd, type: 3}
+    state_Fantasy: {fileID: 6624646716116627411, guid: 3230656780142364b842b1035661116c, type: 3}
+    state_Cyber: {fileID: 6958070590243545921, guid: 4fac140be08bb864fad58f066c6bd830, type: 3}
+  - id: 
+    name: Mug
+    state_Normal: {fileID: 8414091796107116462, guid: 13ca07b8714d28e4582faba0ef6652a0, type: 3}
+    state_Fantasy: {fileID: 8443391532934275507, guid: c46ce6cf374b0fb4f971a11a762a5dd9, type: 3}
+    state_Cyber: {fileID: 5691806730929175761, guid: 2868e4e4c935d0b45b76a7b7144b8511, type: 3}
+  - id: 
+    name: Toilet
+    state_Normal: {fileID: 2083286260803855327, guid: 84629e27a45ee0d438527f79549604b7, type: 3}
+    state_Fantasy: {fileID: 21088972929298012, guid: 5a659250b8d80a0408a4e7f4f66a3f98, type: 3}
+    state_Cyber: {fileID: 5618778053649520273, guid: e3ce0cd54968dba428ec1a6fb5794087, type: 3}
+  - id: 
+    name: Picture
+    state_Normal: {fileID: 4034966026501696426, guid: 41d916d9072764345b76bfb60fadc5e9, type: 3}
+    state_Fantasy: {fileID: 6912886562600526554, guid: 344a99067d4da924faa388b704703538, type: 3}
+    state_Cyber: {fileID: 113814325624213668, guid: 15dfce8c3b459c84d8ca4a510a275d8a, type: 3}
+  - id: 
+    name: Clock
+    state_Normal: {fileID: 6796633881668000927, guid: 330c92babd97a4c4db4893cacdff9683, type: 3}
+    state_Fantasy: {fileID: 534744524297680743, guid: 03fbd29c8a3e84d468fc143c56cd6cee, type: 3}
+    state_Cyber: {fileID: 6103707622138167879, guid: ceb8b3c1f58299d4d927896a1a42ab8a, type: 3}
+  - id: 
+    name: Flower
+    state_Normal: {fileID: 7380745335227176317, guid: f02030a17c8691241ba4ed6aafe9684f, type: 3}
+    state_Fantasy: {fileID: 3041045200543782527, guid: 758152c2096534749a2cb543c92d9e77, type: 3}
+    state_Cyber: {fileID: 6171976156177805795, guid: e8006d20ce3ae6c45b64f5bf4ed5b427, type: 3}
+  - id: 
+    name: Chandelier
+    state_Normal: {fileID: 4907700967081326589, guid: 5ba850715433fa8488a7a27b69c99fcf, type: 3}
+    state_Fantasy: {fileID: 252689049400629971, guid: 742c295ccfe6cf141923482769222c5d, type: 3}
+    state_Cyber: {fileID: 2693521128336491050, guid: 90ead9178d9227649a28c0582ae4b593, type: 3}
