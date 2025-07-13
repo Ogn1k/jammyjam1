@@ -57,7 +57,7 @@ public class ObjectChanger : MonoBehaviour
         //Quaternion rotation = currentCustomObject.curObject.transform.rotation;
 
         Destroy(currentCustomObject.curObject);
-        currentCustomObject.curObject = Instantiate(objectState.state_Normal, position, objectState.state_Fantasy.transform.rotation);
+        currentCustomObject.curObject = Instantiate(objectState.state_Normal, position, objectState.state_Normal.transform.rotation);
     }
     public void SetObjectFantasy()
     {
@@ -73,6 +73,6 @@ public class ObjectChanger : MonoBehaviour
         //Quaternion rotation = currentCustomObject.curObject.transform.rotation;
         
         Destroy(currentCustomObject.curObject);
-        currentCustomObject.curObject = Instantiate(objectState.state_Cyber, position, objectState.state_Fantasy.transform.rotation);
+        currentCustomObject.curObject = Instantiate(objectState.state_Cyber, position, objectState.state_Cyber.transform.rotation);
     }
 }
