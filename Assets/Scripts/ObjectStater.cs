@@ -1,6 +1,4 @@
 using System.Collections.Generic;
-using UnityEditor.AssetImporters;
-using UnityEditor.Rendering;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Stater", menuName = "Custom/Stater")]

@@ -1,7 +1,9 @@
 
 using TMPro;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class ObjectChanger : MonoBehaviour
 {
@@ -11,6 +13,9 @@ public class ObjectChanger : MonoBehaviour
     public ObjectStater objectStater;
     private ObjectState objectState;
     public CurrentCustomObject currentCustomObject;
+    public AudioMixerGroup mixer;
+    public AudioClip[] changeSounds;
+    private AudioSource audioSource;
 
     public void Start()
     {
@@ -24,6 +29,9 @@ public class ObjectChanger : MonoBehaviour
         ref string curState = ref objectKeeper.GetObjectByName(objName.text).state;
         //print(objName.text);
         button.transform.Find("Text").GetComponent<TMP_Text>().text = curState;
+
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.outputAudioMixerGroup = mixer;
     }
 
     public void ChangeState()
@@ -56,6 +64,7 @@ public class ObjectChanger : MonoBehaviour
         Vector3 position = currentCustomObject.curObject.transform.position;
         //Quaternion rotation = currentCustomObject.curObject.transform.rotation;
 
+        audioSource.PlayOneShot(changeSounds[0]);
         Destroy(currentCustomObject.curObject);
         currentCustomObject.curObject = Instantiate(objectState.state_Normal, position, objectState.state_Normal.transform.rotation);
     }
@@ -64,6 +73,7 @@ public class ObjectChanger : MonoBehaviour
         Vector3 position = currentCustomObject.curObject.transform.position;
         //Quaternion rotation = currentCustomObject.curObject.transform.rotation;
 
+        audioSource.PlayOneShot(changeSounds[1]);
         Destroy(currentCustomObject.curObject);
         currentCustomObject.curObject = Instantiate(objectState.state_Fantasy, position, objectState.state_Fantasy.transform.rotation);
     }
@@ -72,6 +82,7 @@ public class ObjectChanger : MonoBehaviour
         Vector3 position = currentCustomObject.curObject.transform.position;
         //Quaternion rotation = currentCustomObject.curObject.transform.rotation;
         
+        audioSource.PlayOneShot(changeSounds[2]);
         Destroy(currentCustomObject.curObject);
         currentCustomObject.curObject = Instantiate(objectState.state_Cyber, position, objectState.state_Cyber.transform.rotation);
     }

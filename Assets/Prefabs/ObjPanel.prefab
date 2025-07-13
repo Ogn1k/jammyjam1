@@ -502,3 +502,8 @@ MonoBehaviour:
   currentCustomObject:
     curObject: {fileID: 0}
     state: Normal
+  mixer: {fileID: -8984299922432141982, guid: 13bd548fddfc1ac4a985df9628b2abc2, type: 2}
+  changeSounds:
+  - {fileID: 8300000, guid: c6c99f4831f8e4d47805447a9f3d59bb, type: 3}
+  - {fileID: 8300000, guid: dd81b19ffd1676e46aee335c86d21099, type: 3}
+  - {fileID: 8300000, guid: 957bb1c52c821e842a0ad183ccf55997, type: 3}

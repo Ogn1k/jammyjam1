@@ -205,9 +205,9 @@ MonoBehaviour:
       - m_Target: {fileID: 2054694578}
         m_TargetAssemblyTypeName: MenuButtons, Assembly-CSharp
         m_MethodName: ChangeScene
-        m_Mode: 2
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 102900000, guid: 78fc75835201f2845be2ad93cd97b2cd, type: 3}
+          m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -1306,49 +1306,49 @@ MonoBehaviour:
     there lived a young girl named Sasha. She was a hereditary herbalist and healer,
     and her house was always full of people seeking help or advice.
 
-    
+
 
     Every
     morning Sasha woke up at first light, prepared medicinal infusions and preparations,
     and then went to the market to buy fresh ingredients. The townspeople knew her
     as a kind and helpful girl, always ready to help.
 
-    
 
-    One day, when
-    Sasha was returning home from the market, she noticed that her cat, fluffy and
-    playful Manya, was behaving strangely. The cat was running around the yard, as
-    if it was tracking something. Sasha decided to follow her and soon discovered
-    that Manya was leading her to an old oak tree in the center of the city.
 
-    
+    One day, when Sasha
+    was returning home from the market, she noticed that her cat, fluffy and playful
+    Manya, was behaving strangely. The cat was running around the yard, as if it
+    was tracking something. Sasha decided to follow her and soon discovered that
+    Manya was leading her to an old oak tree in the center of the city.
+
+
 
     Sasha
     found a little fairy under an oak tree, entangled in a spider''s web. The fairy
     was weak and couldn''t get out on her own. Sasha gently freed her and gave her
     some healing infusion to restore her strength.
 
-    
 
-    The fairy turned
-    out to be very grateful and told Sasha that her home, the magical forest, was
-    in danger. Evil spirits are trying to capture him, and she needs help to protect
-    her home. Sasha, without hesitation, agreed to help.
 
-    
+    The fairy turned out to
+    be very grateful and told Sasha that her home, the magical forest, was in danger.
+    Evil spirits are trying to capture him, and she needs help to protect her home.
+    Sasha, without hesitation, agreed to help.
 
-    Together they
-    went to a magical forest, where Sasha used her knowledge of herbs and spells
-    to scare away evil spirits. The fairy also helped her navigate the forest and
-    find the right herbs.
 
-    
 
-    After several days of fighting, the evil spirits
-    were defeated, and the magical forest once again became a safe place for fairies
-    and other magical creatures. Sasha returned to her town, where grateful townspeople
-    were waiting for her. And Manya, who stayed with her all the time, was rewarded
-    with a lot of treats and became an even more beloved cat in the city.'
+    Together they went to a magical
+    forest, where Sasha used her knowledge of herbs and spells to scare away evil
+    spirits. The fairy also helped her navigate the forest and find the right herbs.
+
+
+
+    After
+    several days of fighting, the evil spirits were defeated, and the magical forest
+    once again became a safe place for fairies and other magical creatures. Sasha
+    returned to her town, where grateful townspeople were waiting for her. And Manya,
+    who stayed with her all the time, was rewarded with a lot of treats and became
+    an even more beloved cat in the city.'
   text3: "In the gloomy alleys of Neo-Tokyo, where the shadows seem longer and the
     rain never stops, the legend of the 'Black Hacker' roams. No one knows his real
     name, but everyone is afraid of his online name. He is a ghost in the world of
@@ -1373,6 +1373,32 @@ MonoBehaviour:
     it from the inside. When the smoke clears, Nikita is left alone in the void of
     cyberspace, realizing that the price of victory was too high. He saved the city
     from the threat, but lost himself in the process."
+  text4: "The City of shadows and light\r\nGlowing neon signs illuminate the narrow
+    streets of the old district. Here, among the abandoned factories and old houses,
+    the world is hidden, living its own life. This is a place where those who need
+    a break from the endless race of the metropolis come.\r\n\r\nSofia is sitting
+    in a small cafe located between two abandoned buildings. Her eyes are glued to
+    the tablet screen, her fingers are running quickly over the virtual keyboard.
+    She has an important meeting today, and she needs to get ready.\r\n\r\nThe coffee
+    is slowly cooling down next to her, but Sofia doesn't even notice it. Her mind
+    is on a project she's been working on for months. This project is supposed to
+    change her life, make her famous in the world of cyberspace.\r\n\r\nIt's raining
+    outside the window, drops trickle down the dirty glass, creating bizarre patterns.
+    Suddenly, an alert tone sounds \u2014 a message has arrived. Sofia looks up and
+    sees the figure of a man in a raincoat standing in front of the cafe entrance.\r\n\r\nThis
+    is Igor, her partner and friend. He always arrives on time, but today he looks
+    especially thoughtful. Sofia waves her hand, inviting him to sit down.\r\n\r\nThey
+    order more coffee and start discussing the details of the project. The conversation
+    smoothly turns to personal topics, memories of the past, dreams of the future.
+    Time flies by unnoticed until the clock on the wall reminds us that the evening
+    shift is about to begin.\r\n\r\nThe rain gradually subsides, giving way to twilight.
+    People are taking to the streets, rushing home after a day at work. But for Sofia
+    and Igor, this evening is just beginning. They know that there is still a lot
+    of work ahead, but the main thing is that they are together, and this makes everything
+    possible.\r\n\r\nThe city continues to live its life, plunging into the darkness
+    of the night, illuminated only by the flickering lights of advertisements and
+    lanterns. But for some, like Sofia and Igor, the night becomes the beginning
+    of a new day full of opportunities and adventures."
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

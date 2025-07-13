@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 538847607719315847}
   - component: {fileID: 2030723664172439463}
   - component: {fileID: 1886387383301326951}
-  - component: {fileID: 5373090797716192262}
   m_Layer: 3
   m_Name: Bed.norma
   m_TagString: Untagged
@@ -87,28 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5373090797716192262
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1150870043781474188}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 3650102693586300188, guid: e0220b7d66e54de489e832dfc3fb1679, type: 3}
 --- !u!1 &3178232935573774852
 GameObject:
   m_ObjectHideFlags: 0
@@ -119,7 +96,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1442200204853188707}
   - component: {fileID: 2799787683210998416}
-  - component: {fileID: 1184684499767558587}
+  - component: {fileID: 8434314570838170148}
   m_Layer: 3
   m_Name: Bed_norma
   m_TagString: normal
@@ -156,7 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lvlLogic: {fileID: 0}
---- !u!65 &1184684499767558587
+--- !u!65 &8434314570838170148
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -175,5 +152,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.8200054, y: 1.4549814, z: 2.5427067}
-  m_Center: {x: 0.13631296, y: -0.016296685, z: 0.03407991}
+  m_Size: {x: 4.7592134, y: 1.1998856, z: 2.5932045}
+  m_Center: {x: 0.12016821, y: 0.09994286, z: 0.038322687}

@@ -1,19 +1,11 @@
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuButtons : MonoBehaviour
 {
-    public void ChangeScene(Object scene)
+    public void ChangeScene(int i)
     {
-        if (scene != null)
-        {
-            SceneManager.LoadScene(scene.name);
-        }
-        else
-        {
-            print("no scene");
-        }
+        SceneManager.LoadScene(i);
     }
 
     public void ExitGame()
