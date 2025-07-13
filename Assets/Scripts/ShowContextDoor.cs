@@ -10,9 +10,11 @@ public class ShowContextDoor : MonoBehaviour
     private CanvasGroup panelCanvasGroup;
     private bool isHovering;
     public Object scene;
+    public LvlLogic lvlLogic;
 
     void Start()
     {
+        lvlLogic = GameObject.Find("LvlLogic").GetComponent<LvlLogic>();
         panelCanvasGroup = tooltipPanel.GetComponent<CanvasGroup>();
         panelCanvasGroup.alpha = 0;
     }
@@ -37,6 +39,7 @@ public class ShowContextDoor : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.E))
                 {
+                    lvlLogic.SetResult();
                     SceneManager.LoadScene(scene.name);
                 }
             }
