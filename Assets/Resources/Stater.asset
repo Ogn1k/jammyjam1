@@ -20,6 +20,6 @@ MonoBehaviour:
     state_Cyber: {fileID: 9177142474888852114, guid: 2737d345b32c5e54f89fad33804d2fa0, type: 3}
   - id: 
     name: Bed
-    state_Normal: {fileID: 4235491842132971317, guid: 86a980c4b930ea945a34826c8c02b46b, type: 3}
-    state_Fantasy: {fileID: 4059551955089147929, guid: 4fa2985453154a644ad9d77f77fff79c, type: 3}
-    state_Cyber: {fileID: 4332513026791111342, guid: c2f5ca6076ceb0845a8600805837d390, type: 3}
+    state_Normal: {fileID: 3178232935573774852, guid: 257d210b598b82046bec4460b1a1ee75, type: 3}
+    state_Fantasy: {fileID: 980095337772602624, guid: aa2b65595b933e9498ff119a6f3e90f7, type: 3}
+    state_Cyber: {fileID: 453283711833825238, guid: c937066bd57a99f43806007203055133, type: 3}
