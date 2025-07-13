@@ -1,5 +1,6 @@
 
 using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class ObjectChanger : MonoBehaviour
@@ -53,25 +54,25 @@ public class ObjectChanger : MonoBehaviour
     public void SetObjectNormal()
     {
         Vector3 position = currentCustomObject.curObject.transform.position;
-        Quaternion rotation = currentCustomObject.curObject.transform.rotation;
+        //Quaternion rotation = currentCustomObject.curObject.transform.rotation;
 
         Destroy(currentCustomObject.curObject);
-        currentCustomObject.curObject = Instantiate(objectState.state_Normal, position, rotation);
+        currentCustomObject.curObject = Instantiate(objectState.state_Normal, position, objectState.state_Fantasy.transform.rotation);
     }
     public void SetObjectFantasy()
     {
         Vector3 position = currentCustomObject.curObject.transform.position;
-        Quaternion rotation = currentCustomObject.curObject.transform.rotation;
+        //Quaternion rotation = currentCustomObject.curObject.transform.rotation;
 
         Destroy(currentCustomObject.curObject);
-        currentCustomObject.curObject = Instantiate(objectState.state_Fantasy, position, rotation);
+        currentCustomObject.curObject = Instantiate(objectState.state_Fantasy, position, objectState.state_Fantasy.transform.rotation);
     }
     public void SetObjectCyber()
     {
         Vector3 position = currentCustomObject.curObject.transform.position;
-        Quaternion rotation = currentCustomObject.curObject.transform.rotation;
+        //Quaternion rotation = currentCustomObject.curObject.transform.rotation;
         
         Destroy(currentCustomObject.curObject);
-        currentCustomObject.curObject = Instantiate(objectState.state_Cyber, position, rotation);
+        currentCustomObject.curObject = Instantiate(objectState.state_Cyber, position, objectState.state_Fantasy.transform.rotation);
     }
 }
