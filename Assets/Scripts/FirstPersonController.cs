@@ -1,6 +1,7 @@
 using UnityEngine;
-[RequireComponent(typeof(CharacterController))]
+using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(CharacterController))]
 public class FirstPersonController : MonoBehaviour
 {
     [Header("Movement Settings")]
@@ -16,11 +17,6 @@ public class FirstPersonController : MonoBehaviour
     public Camera playerCamera;
     public float cameraHeight = 1.6f;
     
-    [Header("Input Settings")]
-    public KeyCode runKey = KeyCode.LeftShift;
-    public KeyCode jumpKey = KeyCode.Space;
-    public KeyCode crouchKey = KeyCode.LeftControl;
-    
     [Header("Advanced Settings")]
     public float airControl = 0.3f;
     public float crouchSpeed = 2.5f;
@@ -28,6 +24,7 @@ public class FirstPersonController : MonoBehaviour
     public float standingHeight = 2f;
     public float crouchTransitionSpeed = 10f;
     
+    // Private variables
     private CharacterController characterController;
     private Vector3 velocity;
     private bool isGrounded;
@@ -35,6 +32,20 @@ public class FirstPersonController : MonoBehaviour
     private bool isCrouching = false;
     private float currentHeight;
     private float targetHeight;
+    
+    // Input System variables
+    private PlayerInputActions playerInputActions;
+    private Vector2 moveInput;
+    private Vector2 lookInput;
+    private bool jumpInput;
+    private bool runInput;
+    private bool crouchInput;
+    
+    void Awake()
+    {
+        // Initialize Input System
+        playerInputActions = new PlayerInputActions();
+    }
     
     void Start()
     {
@@ -57,6 +68,44 @@ public class FirstPersonController : MonoBehaviour
         characterController.height = currentHeight;
     }
     
+    void OnEnable()
+    {
+        // Enable Input Actions
+        playerInputActions.Enable();
+        
+        // Subscribe to Input Events
+        playerInputActions.Player.Move.performed += OnMove;
+        playerInputActions.Player.Move.canceled += OnMove;
+        
+        playerInputActions.Player.Look.performed += OnLook;
+        playerInputActions.Player.Look.canceled += OnLook;
+        
+        playerInputActions.Player.Jump.performed += OnJump;
+        playerInputActions.Player.Run.performed += OnRun;
+        playerInputActions.Player.Run.canceled += OnRun;
+        
+        playerInputActions.Player.Crouch.performed += OnCrouch;
+    }
+    
+    void OnDisable()
+    {
+        // Unsubscribe from Input Events
+        playerInputActions.Player.Move.performed -= OnMove;
+        playerInputActions.Player.Move.canceled -= OnMove;
+        
+        playerInputActions.Player.Look.performed -= OnLook;
+        playerInputActions.Player.Look.canceled -= OnLook;
+        
+        playerInputActions.Player.Jump.performed -= OnJump;
+        playerInputActions.Player.Run.performed -= OnRun;
+        playerInputActions.Player.Run.canceled -= OnRun;
+        
+        playerInputActions.Player.Crouch.performed -= OnCrouch;
+        
+        // Disable Input Actions
+        playerInputActions.Disable();
+    }
+    
     void Update()
     {
         HandleMouseLook();
@@ -69,7 +118,8 @@ public class FirstPersonController : MonoBehaviour
         
         isGrounded = characterController.isGrounded;
         
-        if (Input.GetKeyDown(KeyCode.Escape))
+        // ESC для смены курсора
+        if (Keyboard.current.escapeKey.wasPressedThisFrame)
         {
             if (Cursor.lockState == CursorLockMode.Locked)
             {
@@ -84,13 +134,45 @@ public class FirstPersonController : MonoBehaviour
         }
     }
     
+    #region Input Event Handlers
+    
+    private void OnMove(InputAction.CallbackContext context)
+    {
+        moveInput = context.ReadValue<Vector2>();
+    }
+    
+    private void OnLook(InputAction.CallbackContext context)
+    {
+        lookInput = context.ReadValue<Vector2>();
+    }
+    
+    private void OnJump(InputAction.CallbackContext context)
+    {
+        jumpInput = context.performed;
+    }
+    
+    private void OnRun(InputAction.CallbackContext context)
+    {
+        runInput = context.performed;
+    }
+    
+    private void OnCrouch(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            crouchInput = !crouchInput;
+        }
+    }
+    
+    #endregion
+    
     void HandleMouseLook()
     {
         if (Cursor.lockState != CursorLockMode.Locked)
             return;
-            
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
+        
+        float mouseX = lookInput.x * mouseSensitivity;
+        float mouseY = lookInput.y * mouseSensitivity;
         
         transform.Rotate(Vector3.up * mouseX);
         
@@ -103,16 +185,16 @@ public class FirstPersonController : MonoBehaviour
     
     void HandleMovement()
     {
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
+        float horizontal = moveInput.x;
+        float vertical = moveInput.y;
         
         Vector3 direction = transform.TransformDirection(new Vector3(horizontal, 0, vertical));
         direction = Vector3.ClampMagnitude(direction, 1f);
         
         float currentSpeed = walkSpeed;
-        if (Input.GetKey(runKey))
+        if (runInput)
             currentSpeed = runSpeed;
-        else if (isCrouching)
+        else if (crouchInput)
             currentSpeed = crouchSpeed;
         
         if (isGrounded)
@@ -129,11 +211,7 @@ public class FirstPersonController : MonoBehaviour
     
     void HandleCrouching()
     {
-        if (Input.GetKeyDown(crouchKey))
-        {
-            isCrouching = !isCrouching;
-            targetHeight = isCrouching ? crouchHeight : standingHeight;
-        }
+        targetHeight = crouchInput ? crouchHeight : standingHeight;
         
         if (Mathf.Abs(currentHeight - targetHeight) > 0.01f)
         {
@@ -142,7 +220,7 @@ public class FirstPersonController : MonoBehaviour
             
             if (playerCamera != null)
             {
-                float cameraY = isCrouching ? cameraHeight * 0.5f : cameraHeight;
+                float cameraY = crouchInput ? cameraHeight * 0.5f : cameraHeight;
                 playerCamera.transform.localPosition = new Vector3(0, cameraY, 0);
             }
         }
@@ -150,9 +228,10 @@ public class FirstPersonController : MonoBehaviour
     
     void HandleJumping()
     {
-        if (Input.GetKeyDown(jumpKey) && isGrounded)
+        if (jumpInput && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * 2f * gravity);
+            jumpInput = false; // Reset jump input
         }
     }
     
@@ -160,11 +239,16 @@ public class FirstPersonController : MonoBehaviour
     {
         if (isGrounded && velocity.y < 0)
         {
-            velocity.y = -2f; 
+            velocity.y = -2f;
         }
         else
         {
             velocity.y -= gravity * Time.deltaTime;
         }
+    }
+    
+    void OnDestroy()
+    {
+        playerInputActions?.Dispose();
     }
 }

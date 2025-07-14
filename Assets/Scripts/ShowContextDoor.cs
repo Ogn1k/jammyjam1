@@ -9,7 +9,7 @@ public class ShowContextDoor : MonoBehaviour
     private float fadeSpeed = 2f;
     private CanvasGroup panelCanvasGroup;
     private bool isHovering;
-    public Object scene;
+    public int scene;
     public LvlLogic lvlLogic;
 
     void Start()
@@ -40,7 +40,7 @@ public class ShowContextDoor : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
                 {
                     lvlLogic.SetResult();
-                    SceneManager.LoadScene(scene.name);
+                    SceneManager.LoadScene(scene);
                 }
             }
         else
